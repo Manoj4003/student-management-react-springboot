@@ -1,0 +1,103 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 76px;
+
+  /* ⭐ PERFECT COLOR */
+  background: linear-gradient(135deg, #2f3a4f, #1f2937);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== INNER ===== */
+.navbar-inner {
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== LOGO ===== */
+.nav-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f9fafb;
+  letter-spacing: 0.4px;
+}
+
+/* ===== LINKS ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ===== NAV ITEM ===== */
+.nav-item {
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 10px;
+  color: #d1d5db;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover */
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Active */
+.nav-item.active {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard-btn {
+  border: 1px solid rgba(129, 140, 248, 0.6);
+  color: #e0e7ff !important;
+}
+
+/* ===== ADD STUDENT ===== */
+.add-btn {
+  background: #6366f1; /* calm indigo */
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.add-btn:hover {
+  background: #4f46e5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 12px 0;
+  }
+
+  .navbar-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

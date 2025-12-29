@@ -1,74 +1,117 @@
-/* Page center */
+/* Page background with image */
 .form-container {
-  min-height: 100vh;
+  min-height: calc(100vh - 78px); /* navbar height */
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: #f4f6f8;
+  justify-content: center;
+  padding: 20px;
+
+  /* Background image */
+  background-image: 
+    linear-gradient(
+      rgba(15, 23, 42, 0.55),
+      rgba(15, 23, 42, 0.55)
+    ),
+    url("https://images.unsplash.com/photo-1523240795612-9a054b0db644");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Form card */
 .student-form {
-  width: 350px;
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+  background: rgba(17, 24, 39, 0.88); /* soft dark glass */
+  padding: 30px 28px;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
 }
 
 /* Heading */
 .student-form h2 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #333;
+  margin-bottom: 22px;
+  color: #f9fafb;
+  font-size: 22px;
+  letter-spacing: 0.4px;
 }
 
 /* Inputs */
 .student-form input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(31, 41, 55, 0.9);
+  color: #f9fafb;
+  font-size: 15px;
+  transition: all 0.25s ease;
 }
 
+/* Placeholder */
+.student-form input::placeholder {
+  color: #9ca3af;
+}
+
+/* Focus */
 .student-form input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #818cf8;
+  box-shadow: 0 0 0 2px rgba(129, 140, 248, 0.35);
 }
 
 /* Button group */
 .button-group {
   display: flex;
-  justify-content: space-between;
+  gap: 14px;
   margin-top: 10px;
 }
 
 /* Save button */
 .save-btn {
-  background: #007bff;
-  color: white;
+  flex: 1;
+  padding: 12px;
   border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .save-btn:hover {
-  background: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(99, 102, 241, 0.55);
 }
 
 /* Cancel button */
 .cancel-btn {
-  background: #dc3545;
-  color: white;
+  flex: 1;
+  padding: 12px;
   border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
+  background: rgba(55, 65, 81, 0.9);
+  color: #e5e7eb;
+  transition: all 0.25s ease;
 }
 
 .cancel-btn:hover {
-  background: #b02a37;
+  background: rgba(75, 85, 99, 0.95);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .student-form {
+    padding: 24px 20px;
+  }
 }
