@@ -1,4 +1,4 @@
-# React + Vite Applications
+# React + Vite 
 
 
 
